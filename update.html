@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>update
+</title>
+<link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+
+</head>
+<body>
+
+<div class="container">
+  <h1>Update Task</h1>
+
+ <!--data[0] refers to tid -->
+<form action="/updatetask/{{data[0]}}">
+        <label for="task">Task:</label>
+         <!--data[1] refers to task -->
+        <input type="text" name="task" id="task" value="{{data[1]}}"/>
+        <br/>
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+          <!--data[2] refers to status -->
+           <!--id condition is to retrieve what was entered before or saved in db -->
+
+            <option {% if data[2] == "Started"%}selected{%endif%}>Started</option>
+            <option {% if data[2] == "InProgress"%}selected{%endif%}>InProgress</option>
+            <option {% if data[2] == "Completed"%}selected{%endif%}>Completed</option>
+            <option {% if data[2] == "Pending"%}selected{%endif%}>Pending</option>
+
+        </select>
+        <input type="submit" value="Update"/>
+    </form>
+</div>
+</body>
+</html>

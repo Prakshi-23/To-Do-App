@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home </a>
+          </li>
+        </ul>
+       
+      </div>
+    </nav>
+
+</head>
+<body>
+
+<div class="container">
+	
+    <h1>Add Task</h1>
+    <form action="/inserttask">
+        <label for="task">Task:</label>
+        <input type="text" name="task" id="task"/>
+        <br/>
+	    <label for="status">Status:</label>
+    <!-- status dropdown   -->
+        <select id="status" name="status">
+          <option>Started</option>
+          <option>InProgress</option>
+          <option>Pending</option>
+          <option>Completed</option>
+        </select>
+        <input type="submit" value="Insert"/>
+    </form>
+	</div>
+</body>
+</html>
