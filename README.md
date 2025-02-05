@@ -49,6 +49,7 @@ pip install pymysql
 ```sh
 py app.py
 ```
+### Note: Keep the html files in templates folder inside your project folder and virtualenv env command will create a folder as well also keep static folder to store the images, css, and js files that is used in the app
 
 The app will be running at: `http://127.0.0.1:5000/`
 
