@@ -33,7 +33,7 @@ pip install virtualenv
 virtualenv env
 # Activate virtual environment
 # Windows
-venv\Scripts\activate
+env\Scripts\activate
 
 ```
 
